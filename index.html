@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/bookmark.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center py-5 main-bg flex-column">
+        <h1 class="py-2 position-relative">Bookmarker</h1>
+        <div class="bookmark-body w-100 py-4 p-3 mt-5 gap-4 d-flex justify-content-center align-items-center flex-column">
+            <h2>
+            <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites 
+            <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="site-name d-flex justify-content-center w-100 flex-column">
+                <label for="bookmarkName" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-book-bookmark pe-2"></i>
+                    Site Name
+                </label>
+                <input type="text" placeholder="Bookmark Name" id="bookmarkName" class="form-control">
+                <div class="d-none alert alert-danger text-danger" id="alertName">
+                    <p>WebSite Name Must Be At Least 3 Characters Starts With A Letter & Not Including (.com, .org, .eg, etc)</p>
+                </div>
+            </div>
+            <div class="url-name d-flex justify-content-center w-100 flex-column">
+                <label for="bookmarkUrl" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-link pe-2"></i>
+                    Site URL
+                </label>
+                <input type="url" placeholder="Website URL" id="bookmarkUrl" class="form-control">
+                <div class="d-none alert alert-danger text-danger" id="alertUrl">
+                    <p>Please Enter Valid URL Choose From The Below Examples <br>
+                        "example.com" <br>
+                        "https://example.com" <br>
+                        "www.example.com" <br> 
+                        "https://www.example.com" <br>
+                        All TLD Are Supported {.com, .org, .eg, .org, etc.}</p>
+                </div>
+            </div>
+            <button id="submitBtn" onclick="addSite();" class="btn btn-submit px-5">Submit</button>
+
+        </div>
+        <table class="table table-striped mt-4 text-center bg-light">
+            <thead>
+                <tr>
+                    <th class="text-capitalize">index</th >
+                    <th class="text-capitalize">website name</th >
+                    <th class="text-capitalize">visit</th >
+                    <th class="text-capitalize">delete</th >
+                </tr>
+            </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
